@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Climate Awareness - Image Classification</title>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/custom.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+
+</head>
+
+<body style="background-color: khaki">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Climate Awareness - Image Classification</a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Image Classification</h1>
+            </div>
+            <div class="row inputRow">
+                <div class="col-lg-4">
+                    <a class="thumbnail" href="#">
+                        <img id="img_plc" class="img-responsive" src="input/test/deforestation/15.jpg" alt="image" />
+                    </a>
+                </div>
+                <div class="col-md-1 text-center ver-centr">
+                    <input class="vertical-center" id="clk" type="button" value="Predict Image" style="background-color: #985f0d;
+    border: none;
+    color: white;
+
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;" />
+
+                </div>
+
+<div class="col-lg-4">
+                    <h3 id="txt_area"> </h3>
+                    <img id="meow" src="input/loading2.gif" alt="O" style="display:none">
+</div>
+            </div>
+
+            <h4>Select an Image:</h4>
+
+<div class="row">
+    <h1>Deforestation</h1>
+            <div class="col-lg-3">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" height="100%" name="Image" src="input/test/deforestation/2.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" height="400" name="Image" src="input/test/deforestation/12.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" height="80%" name="Image" src="input/test/deforestation/13.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="200" name="Image" src="input/test/deforestation/15.jpg" alt="">
+                </a>
+            </div>
+</div>
+            <div class="row">
+                <h1>Glacier Melting</h1>
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/glacier_melting/1.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" name="Image" width="80%" src="input/test/glacier_melting/8.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/glacier_melting/10.jpg" alt="">
+                </a>
+            </div>
+
+
+            <div class="col-lg-3">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/glacier_melting/11.jpg" alt="">
+                </a>
+            </div>
+            </div>
+            <div class="row">
+                <h1>Ice Sheet Melting</h1>
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/ice_sheet_melting/1.jpg" alt="">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/ice_sheet_melting/3.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/ice_sheet_melting/8.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/ice_sheet_melting/11.jpg" alt="">
+                </a>
+            </div>
+            </div>
+            <div class="row">
+                <h1>Sea Level Rise</h1>
+            <div class="col-lg-3">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/sea_level_rise/1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/sea_level_rise/2.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/sea_level_rise/5.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 ">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" width="80%" name="Image" src="input/test/sea_level_rise/15.jpg" alt="">
+                </a>
+            </div>
+            </div>
+
+        </div>
+        <hr>
+
+    </div>
+    <!-- /.container -->
+
+
+</body>
+
+</html>
